@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Returns a result given a search query string 1`] = `
+exports[`SearchResult component unit tests Returns a result given a search query string 1`] = `
 <div>
   <div
     role="searchbox"

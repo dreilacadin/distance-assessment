@@ -6,15 +6,15 @@ export default function SearchBar() {
       <label htmlFor="query">Search</label>
       <div className="flex items-center space-x-2">
         <input
-          role="input"
-          className="block border border-slate-700 rounded-lg p-2"
+          role="search"
+          className="block rounded-lg border border-slate-700 p-2"
           type="text"
           name="query"
           id="query"
           placeholder="Search something here.."
         />
         <button
-          className="text-blue-50 bg-blue-700 p-2 rounded-lg"
+          className="rounded-lg bg-blue-700 p-2 text-blue-50"
           type="submit"
         >
           Search
