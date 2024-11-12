@@ -6,13 +6,28 @@ exports[`renders homepage unchanged 1`] = `
     <h2>
       Tasks:
     </h2>
-    <ul>
-      <li>
+    <ol
+      class="list-decimal"
+    >
+      <li
+        class="list-inside"
+      >
         <a
           href="/search"
-        />
+        >
+          Real-time search
+        </a>
       </li>
-    </ul>
+      <li
+        class="list-inside"
+      >
+        <a
+          href="#"
+        >
+          Photo gallery
+        </a>
+      </li>
+    </ol>
   </div>
 </div>
 `;
