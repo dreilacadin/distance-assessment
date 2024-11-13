@@ -5,7 +5,7 @@ import { users } from "@/app/search/dummyUsers";
 /** Renders this component if a non-empty query string is received as a prop */
 function FilteredUsers({ query }: { query: string }) {
   return (
-    <div role="searchbox">
+    <div className="flex flex-col space-y-4" role="searchbox">
       {users
         .filter((user) => {
           /** Fields to search for with the query string. Consider optimizing this if needed. */
@@ -28,7 +28,7 @@ export default function SearchResults({ query }: { query: string }) {
   }
 
   return (
-    <div role="searchbox">
+    <div className="flex flex-col space-y-4" role="searchbox">
       {users.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}

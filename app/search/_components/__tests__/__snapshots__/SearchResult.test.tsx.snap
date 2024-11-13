@@ -3,16 +3,17 @@
 exports[`SearchResult component unit tests Returns a result given a search query string 1`] = `
 <div>
   <div
+    class="flex flex-col space-y-4"
     role="searchbox"
   >
     <div
-      class="my-8 rounded-lg border border-gray-200 bg-white p-8 shadow"
+      class="rounded-lg border border-gray-200 bg-white p-8 shadow-lg"
     >
       <ul
-        class="flex flex-col space-y-2 text-slate-800"
+        class="flex flex-col space-y-3 text-slate-800"
       >
         <li
-          class="flex items-center space-x-2"
+          class="flex items-center space-x-3"
         >
           <svg
             aria-hidden="true"
@@ -37,7 +38,7 @@ exports[`SearchResult component unit tests Returns a result given a search query
           </span>
         </li>
         <li
-          class="flex items-center space-x-2"
+          class="flex items-center space-x-3"
         >
           <svg
             aria-hidden="true"
@@ -62,7 +63,7 @@ exports[`SearchResult component unit tests Returns a result given a search query
           </span>
         </li>
         <li
-          class="flex items-center space-x-2"
+          class="flex items-center space-x-3"
         >
           <svg
             aria-hidden="true"
@@ -104,7 +105,7 @@ exports[`SearchResult component unit tests Returns a result given a search query
           </div>
         </li>
         <li
-          class="flex items-center space-x-2"
+          class="flex items-center space-x-3"
         >
           <svg
             aria-hidden="true"
@@ -127,7 +128,7 @@ exports[`SearchResult component unit tests Returns a result given a search query
           </span>
         </li>
         <li
-          class="flex items-center space-x-2"
+          class="flex items-center space-x-3"
         >
           <svg
             aria-hidden="true"
@@ -150,11 +151,11 @@ exports[`SearchResult component unit tests Returns a result given a search query
           </span>
         </li>
         <li
-          class="flex items-center space-x-2"
+          class="flex items-start space-x-3"
         >
           <svg
             aria-hidden="true"
-            class="size-5 text-gray-700"
+            class="mt-1 size-5 text-gray-700"
             data-slot="icon"
             fill="none"
             stroke="currentColor"
@@ -168,12 +169,20 @@ exports[`SearchResult component unit tests Returns a result given a search query
               stroke-linejoin="round"
             />
           </svg>
-          <p>
-            Johns Group
-          </p>
-          <p>
-            Configurable multimedia task-force
-          </p>
+          <div
+            class="flex flex-col"
+          >
+            <p
+              class="font-medium"
+            >
+              Johns Group
+            </p>
+            <p
+              class="text-sm text-gray-600"
+            >
+              Configurable multimedia task-force
+            </p>
+          </div>
         </li>
       </ul>
     </div>

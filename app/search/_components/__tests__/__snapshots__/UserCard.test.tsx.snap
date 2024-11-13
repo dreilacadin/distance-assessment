@@ -3,13 +3,13 @@
 exports[`UserCard unit tests should render a user card when passed a user object 1`] = `
 <div>
   <div
-    class="my-8 rounded-lg border border-gray-200 bg-white p-8 shadow"
+    class="rounded-lg border border-gray-200 bg-white p-8 shadow-lg"
   >
     <ul
-      class="flex flex-col space-y-2 text-slate-800"
+      class="flex flex-col space-y-3 text-slate-800"
     >
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -34,7 +34,7 @@ exports[`UserCard unit tests should render a user card when passed a user object
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -59,7 +59,7 @@ exports[`UserCard unit tests should render a user card when passed a user object
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -101,7 +101,7 @@ exports[`UserCard unit tests should render a user card when passed a user object
         </div>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -124,7 +124,7 @@ exports[`UserCard unit tests should render a user card when passed a user object
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -147,11 +147,11 @@ exports[`UserCard unit tests should render a user card when passed a user object
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-start space-x-3"
       >
         <svg
           aria-hidden="true"
-          class="size-5 text-gray-700"
+          class="mt-1 size-5 text-gray-700"
           data-slot="icon"
           fill="none"
           stroke="currentColor"
@@ -165,12 +165,20 @@ exports[`UserCard unit tests should render a user card when passed a user object
             stroke-linejoin="round"
           />
         </svg>
-        <p>
-          Romaguera-Crona
-        </p>
-        <p>
-          Multi-layered client-server neural-net
-        </p>
+        <div
+          class="flex flex-col"
+        >
+          <p
+            class="font-medium"
+          >
+            Romaguera-Crona
+          </p>
+          <p
+            class="text-sm text-gray-600"
+          >
+            Multi-layered client-server neural-net
+          </p>
+        </div>
       </li>
     </ul>
   </div>
@@ -180,13 +188,13 @@ exports[`UserCard unit tests should render a user card when passed a user object
 exports[`UserCard unit tests should render another user card correctly when passed another user object 1`] = `
 <div>
   <div
-    class="my-8 rounded-lg border border-gray-200 bg-white p-8 shadow"
+    class="rounded-lg border border-gray-200 bg-white p-8 shadow-lg"
   >
     <ul
-      class="flex flex-col space-y-2 text-slate-800"
+      class="flex flex-col space-y-3 text-slate-800"
     >
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -211,7 +219,7 @@ exports[`UserCard unit tests should render another user card correctly when pass
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -236,7 +244,7 @@ exports[`UserCard unit tests should render another user card correctly when pass
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -278,7 +286,7 @@ exports[`UserCard unit tests should render another user card correctly when pass
         </div>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -301,7 +309,7 @@ exports[`UserCard unit tests should render another user card correctly when pass
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-center space-x-3"
       >
         <svg
           aria-hidden="true"
@@ -324,11 +332,11 @@ exports[`UserCard unit tests should render another user card correctly when pass
         </span>
       </li>
       <li
-        class="flex items-center space-x-2"
+        class="flex items-start space-x-3"
       >
         <svg
           aria-hidden="true"
-          class="size-5 text-gray-700"
+          class="mt-1 size-5 text-gray-700"
           data-slot="icon"
           fill="none"
           stroke="currentColor"
@@ -342,12 +350,20 @@ exports[`UserCard unit tests should render another user card correctly when pass
             stroke-linejoin="round"
           />
         </svg>
-        <p>
-          Yost and Sons
-        </p>
-        <p>
-          Switchable contextually-based project
-        </p>
+        <div
+          class="flex flex-col"
+        >
+          <p
+            class="font-medium"
+          >
+            Yost and Sons
+          </p>
+          <p
+            class="text-sm text-gray-600"
+          >
+            Switchable contextually-based project
+          </p>
+        </div>
       </li>
     </ul>
   </div>

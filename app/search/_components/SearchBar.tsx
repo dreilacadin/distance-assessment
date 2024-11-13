@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function SearchBar() {
   return (
-    <form className="flex flex-col space-y-4" action="/search">
+    <form className="flex flex-col space-y-4 bg-white" action="/search">
       <div className="flex items-baseline justify-between">
         <label className="text-sm font-semibold uppercase" htmlFor="query">
           User Search

@@ -16,9 +16,15 @@ export default async function SearchPage({
 }) {
   const { query } = await searchParams;
   return (
-    <div className="container mx-auto sm:max-w-screen-sm">
-      <SearchBar />
-      <SearchResults query={query} />
+    <div className="max-h-screen overflow-y-auto">
+      <div className="sticky top-0 mx-auto">
+        <div className="container mx-auto bg-white p-6 sm:max-w-screen-sm">
+          <SearchBar />
+        </div>
+      </div>
+      <div className="container mx-auto px-6 sm:max-w-screen-sm">
+        <SearchResults query={query} />
+      </div>
     </div>
   );
 }

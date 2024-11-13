@@ -10,17 +10,17 @@ import {
 
 export default function UserCard({ user }: { user: User }) {
   return (
-    <div className="my-8 rounded-lg border border-gray-200 bg-white p-8 shadow">
-      <ul className="flex flex-col space-y-2 text-slate-800">
-        <li className="flex items-center space-x-2">
+    <div className="rounded-lg border border-gray-200 bg-white p-8 shadow-lg">
+      <ul className="flex flex-col space-y-3 text-slate-800">
+        <li className="flex items-center space-x-3">
           <UserCircleIcon className="size-5 text-gray-700" />
           <span className="text-lg font-semibold">{user.name}</span>
         </li>
-        <li className="flex items-center space-x-2">
+        <li className="flex items-center space-x-3">
           <EnvelopeIcon className="size-5 text-gray-700" />
           <span data-testid="email">{user.email}</span>
         </li>
-        <li className="flex items-center space-x-2">
+        <li className="flex items-center space-x-3">
           <MapPinIcon className="size-5 text-gray-700" />
           <div>
             <span>{user.address.street}, </span>
@@ -29,18 +29,20 @@ export default function UserCard({ user }: { user: User }) {
             <span>{user.address.zipcode}</span>
           </div>
         </li>
-        <li className="flex items-center space-x-2">
+        <li className="flex items-center space-x-3">
           <PhoneIcon className="size-5 text-gray-700" />
           <span>{user.phone}</span>
         </li>
-        <li className="flex items-center space-x-2">
+        <li className="flex items-center space-x-3">
           <GlobeAltIcon className="size-5 text-gray-700" />
           <span>{user.website}</span>
         </li>
-        <li className="flex items-center space-x-2">
-          <BriefcaseIcon className="size-5 text-gray-700" />
-          <p>{user.company.name}</p>
-          <p>{user.company.catchPhrase}</p>
+        <li className="flex items-start space-x-3">
+          <BriefcaseIcon className="mt-1 size-5 text-gray-700" />
+          <div className="flex flex-col">
+            <p className="font-medium">{user.company.name}</p>
+            <p className="text-sm text-gray-600">{user.company.catchPhrase}</p>
+          </div>
         </li>
       </ul>
     </div>
