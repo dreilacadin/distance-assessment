@@ -14,7 +14,7 @@ export default function Page() {
           <Link href={paths.search}>Real-time search</Link>
         </li>
         <li className="list-inside">
-          <Link href="#">Photo gallery</Link>
+          <Link href={paths.gallery}>Photo gallery</Link>
         </li>
       </ol>
     </div>

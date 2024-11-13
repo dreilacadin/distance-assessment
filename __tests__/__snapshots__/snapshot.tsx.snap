@@ -24,7 +24,7 @@ exports[`renders homepage unchanged 1`] = `
         class="list-inside"
       >
         <a
-          href="#"
+          href="/photo-gallery"
         >
           Photo gallery
         </a>
