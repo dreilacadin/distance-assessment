@@ -1,5 +1,6 @@
 /** Filtering a list of dummy users given a query parameter */
-import { users } from "@/app/search/_components/dummyUsers";
+import UserCard from "@/app/search/_components/UserCard";
+import { users } from "@/app/search/dummyUsers";
 
 /** Renders this component if a non-empty query string is received as a prop */
 function FilteredUsers({ query }: { query: string }) {
@@ -15,25 +16,21 @@ function FilteredUsers({ query }: { query: string }) {
           );
         })
         .map((user) => (
-          <div key={user.id}>
-            <pre>{JSON.stringify(user, null, 2)}</pre>
-          </div>
+          <UserCard key={user.id} user={user} />
         ))}
     </div>
   );
 }
 
 export default function SearchResults({ query }: { query: string }) {
-  if (query.trim().length > 0) {
+  if (query?.trim().length > 0) {
     return <FilteredUsers query={query.trim()} />;
   }
 
   return (
     <div role="searchbox">
       {users.map((user) => (
-        <div key={user.id}>
-          <pre>{JSON.stringify(user, null, 2)}</pre>
-        </div>
+        <UserCard key={user.id} user={user} />
       ))}
     </div>
   );

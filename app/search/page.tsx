@@ -1,4 +1,4 @@
-import SearchBar from "@/app/components/inputs/SearchBar";
+import SearchBar from "@/app/search/_components/SearchBar";
 import SearchResults from "@/app/search/_components/SearchResults";
 
 /**
@@ -16,9 +16,9 @@ export default async function SearchPage({
 }) {
   const { query } = await searchParams;
   return (
-    <>
+    <div className="container mx-auto sm:max-w-screen-sm">
       <SearchBar />
       <SearchResults query={query} />
-    </>
+    </div>
   );
 }
