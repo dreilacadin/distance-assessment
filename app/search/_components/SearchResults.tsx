@@ -1,4 +1,10 @@
-/** Filtering a list of dummy users given a query parameter */
+/** Filtering a list of dummy users given a query parameter
+ *  As the app scales, This can be improved by persisting or storing the data in a database or etc.
+ *  Styling can still also be improved as well as putting loading states which will be easier if there are async calls to APIs
+ *  So that we could utilize React Suspense without having to set a fake timeout ;)
+ *
+ *  Also an empty result state is missing in this implementation, which is also a point of improvement.
+ */
 import UserCard from "@/app/search/_components/UserCard";
 import { users } from "@/app/search/dummyUsers";
 
