@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div>
+    <div className="p-8">
       <h2>Tasks:</h2>
       <ol className="list-decimal">
         <li className="list-inside">

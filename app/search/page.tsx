@@ -1,5 +1,8 @@
 import SearchBar from "@/app/search/_components/SearchBar";
 import SearchResults from "@/app/search/_components/SearchResults";
+import { HomeIcon } from "@heroicons/react/24/outline";
+import { paths } from "lib/paths";
+import Link from "next/link";
 
 /**
  * Search Page which is handled by passing a search query using URL params
@@ -16,7 +19,7 @@ export default async function SearchPage({
 }) {
   const { query } = await searchParams;
   return (
-    <div className="max-h-screen overflow-y-auto">
+    <div className="max-h-screen overflow-y-auto pb-6">
       <div className="sticky top-0 mx-auto">
         <div className="container mx-auto bg-white p-6 sm:max-w-screen-sm">
           <SearchBar />
