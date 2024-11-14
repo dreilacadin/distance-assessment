@@ -1,6 +1,6 @@
 import { Modal } from "@/app/photo-gallery/_components/Modal";
 import { blurhashToBase64 } from "blurhash-base64";
-import { getImage } from "lib/queries";
+import type { Image as ImageType } from "lib/types";
 import Image from "next/image";
 
 export default async function PhotoModal({
@@ -9,7 +9,12 @@ export default async function PhotoModal({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const image = await getImage(id);
+  let data = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/search?id=${id}`,
+  );
+
+  let image: ImageType = await data.json();
+
   if (!image) return <Modal>No Image found</Modal>;
 
   return (
