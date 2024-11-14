@@ -4,4 +4,5 @@
 export const paths = {
   home: "/",
   search: "/search",
+  gallery: "/photo-gallery",
 };
