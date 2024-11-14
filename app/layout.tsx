@@ -1,4 +1,10 @@
 import "@/styles/global.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "technical assessment",
+  description: "distance.so technical assessment",
+};
 
 export default function RootLayout({
   children,
@@ -8,7 +14,7 @@ export default function RootLayout({
   modal: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
         {children}
         {modal}

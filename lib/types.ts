@@ -147,8 +147,8 @@ export interface User {
   portfolio_url?: string;
   bio?: string;
   location?: string;
-  links: Links3;
-  profile_image: ProfileImage2;
+  links?: Links3;
+  profile_image?: ProfileImage2;
   instagram_username?: string;
   total_collections: number;
   total_likes: number;
@@ -158,7 +158,7 @@ export interface User {
   total_promoted_illustrations: number;
   accepted_tos: boolean;
   for_hire: boolean;
-  social: Social2;
+  social?: Social2;
 }
 
 export interface Links3 {
