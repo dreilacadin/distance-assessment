@@ -5,16 +5,14 @@
 import { Image, Images } from "lib/types";
 
 export async function getImages(): Promise<Image[]> {
-  let data = await fetch(
-    `${process.env.NEXT_PUBLIC_CLIENT_HOST}/photo-gallery/api/all`,
-  );
+  let data = await fetch(`http:localhost:3000/photo-gallery/api/all`);
   let { images }: Images = await data.json();
   return images;
 }
 
 export async function getImage(id: string): Promise<Image> {
   let data = await fetch(
-    `${process.env.NEXT_PUBLIC_CLIENT_HOST}/photo-gallery/api/search?id=${id}`,
+    `http:localhost:3000/photo-gallery/api/search?id=${id}`,
   );
 
   let image: Image = await data.json();
