@@ -50,6 +50,10 @@ pnpm test
 
 `pnpm install`
 
+### Create env variables
+
+- create an `.env.development.local` and an `.env.test` file and populate with the values sent via email.
+
 ### Run dev environment
 
 `pnpm dev`
