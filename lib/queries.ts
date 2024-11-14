@@ -11,3 +11,13 @@ export async function getImages(): Promise<Image[]> {
   let { images }: Images = await data.json();
   return images;
 }
+
+export async function getImage(id: string): Promise<Image> {
+  let data = await fetch(
+    `${process.env.NEXT_PUBLIC_CLIENT_HOST}/photo-gallery/api/search?id=${id}`,
+  );
+
+  let image: Image = await data.json();
+
+  return image;
+}

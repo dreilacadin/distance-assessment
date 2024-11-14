@@ -15,6 +15,7 @@ exports[`renders homepage unchanged 1`] = `
         class="list-inside"
       >
         <a
+          class="hover:underline"
           href="/search"
         >
           Real-time search
@@ -24,6 +25,7 @@ exports[`renders homepage unchanged 1`] = `
         class="list-inside"
       >
         <a
+          class="hover:underline"
           href="/photo-gallery"
         >
           Photo gallery

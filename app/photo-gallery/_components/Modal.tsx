@@ -15,7 +15,10 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="absolute inset-0 flex h-screen w-screen flex-col items-center justify-center bg-slate-900/60">
+    <div
+      onClick={onDismiss}
+      className="absolute inset-0 flex h-screen w-screen flex-col items-center justify-center bg-slate-900/60"
+    >
       <dialog
         ref={dialogRef}
         className="relative rounded-xl shadow-lg"

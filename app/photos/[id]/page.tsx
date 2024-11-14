@@ -1,7 +1,7 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { blurhashToBase64 } from "blurhash-base64";
 import { paths } from "lib/paths";
-import { getImages } from "lib/queries";
+import { getImage } from "lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,9 +11,9 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const images = await getImages();
-  const image = images.find((image) => image.id === id);
+  const image = await getImage(id);
   if (!image) return <div>No Image found</div>;
+
   return (
     <div className="flex h-screen w-full flex-col items-center justify-center bg-slate-800 p-8">
       <div className="flex justify-start py-8">

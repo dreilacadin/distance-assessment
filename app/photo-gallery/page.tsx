@@ -19,6 +19,7 @@ import Link from "next/link";
  *  - I wish I had more time to add Modal controls and thumbnail selector for the PhotoModal component so that Images can be swipeable and act like a carousel on desktop
  *  - Infinite loading / scrolling more images
  *  - Ability to upload own images
+ *  - More tests for PhotoGallery component as I was unable to test async Server components as of now as a limitation of NextJS and Jest
  */
 
 export default async function PhotoGallery() {

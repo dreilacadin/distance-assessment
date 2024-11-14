@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
  *  Route handlers are App router's API routes equivalent.
  */
 export async function GET() {
-  /** This  fetches a list of image objects from [Unsplash API](https://unsplash.com/documentation#list-photos)  */
+  /** This fetches 30 photos from a list of image objects from [Unsplash API](https://unsplash.com/documentation#list-photos)  */
   let data = await fetch(
-    "https://api.unsplash.com/collections/3802332/photos",
+    "https://api.unsplash.com/collections/3802332/photos?per_page=30",
     {
       method: "GET",
       headers: {
