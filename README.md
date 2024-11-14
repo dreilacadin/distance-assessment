@@ -36,10 +36,26 @@ pnpm test
       metadata like URLs and captions.
 - [x] Implement API routes to fetch photo data from a datasource or a mock.
 - [x] Provide commentary on how your implementation can be improved.
-- [ ] Include tests to verify that your solution works correctly under concurrent usage.
+- [x] Include tests to verify that your solution works correctly under concurrent usage.
 
 #### Task 3: (Optional) Open-ended challenge
 
 - [ ] Propose and solve a programming challenge that you believe showcases your ingenuity and
       deep understanding of NextJS and Typescript. This could involve algorithms, system design,
       tool development, or any area you excel in.
+
+## How to run:
+
+### Install packages (Use pnpm recommended)
+
+`pnpm install`
+
+### Run dev environment
+
+`pnpm dev`
+
+### Run tests
+
+`pnpm test`
+
+Any questions, issues or feedback, feel free to reach me out [here](mailto:dreilacadin@gmail.com) 👋
