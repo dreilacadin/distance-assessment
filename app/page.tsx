@@ -5,6 +5,8 @@ export const metadata = {
   title: "App Router",
 };
 
+export const runtime = "edge";
+
 export default function Page() {
   return (
     <div className="p-8">
