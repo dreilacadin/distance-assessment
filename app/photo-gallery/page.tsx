@@ -23,9 +23,7 @@ import Link from "next/link";
  */
 
 export default async function PhotoGallery() {
-  let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/all`,
-  );
+  let data = await fetch(process.env.BASE_URL + "/photo-gallery/api/all");
   let { images }: Images = await data.json();
 
   return (
