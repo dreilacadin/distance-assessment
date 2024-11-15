@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import ThemeToggle from "@/app/photo-gallery/_components/ThemeToggle";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import { blurhashToBase64 } from "blurhash-base64";
