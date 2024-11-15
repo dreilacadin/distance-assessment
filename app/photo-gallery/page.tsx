@@ -4,7 +4,7 @@ import ThemeToggle from "@/app/photo-gallery/_components/ThemeToggle";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import { blurhashToBase64 } from "blurhash-base64";
 import { paths } from "lib/paths";
-import { Images } from "lib/types";
+import { getImages } from "lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,8 +25,7 @@ import Link from "next/link";
  */
 
 export default async function PhotoGallery() {
-  let data = await fetch(process.env.BASE_URL + "/photo-gallery/api/all");
-  let { images }: Images = await data.json();
+  let images = await getImages();
 
   return (
     <div className="min-h-screen bg-white p-8 dark:bg-slate-800">
