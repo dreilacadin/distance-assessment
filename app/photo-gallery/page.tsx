@@ -67,7 +67,7 @@ export default async function PhotoGallery() {
                           (max-width: 1536px) 33vw,
                           25vw"
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-zinc-900 px-5 py-4 transition-opacity lg:opacity-0 lg:group-hover:opacity-100">
+                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-zinc-900 px-5 py-4 opacity-0 transition-opacity group-hover:opacity-100">
                     <h3 className="text-lg text-white transition-transform lg:translate-y-2 lg:group-hover:translate-y-0">
                       {image.description}
                     </h3>
