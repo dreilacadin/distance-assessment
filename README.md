@@ -62,4 +62,10 @@ pnpm test
 
 `pnpm test`
 
+## Check it out live on Prod at Vercel 🟢
+
+```
+https://distance-assessment.vercel.app/
+```
+
 Any questions, issues or feedback, feel free to reach me out [here](mailto:dreilacadin@gmail.com) 👋
