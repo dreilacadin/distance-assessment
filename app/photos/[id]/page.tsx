@@ -10,9 +10,9 @@ export default async function Page({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  const { id } = await params;
+  const id = (await params).id;
   let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/search?id=${id}`,
+    `${process.env.BASE_URL}/photo-gallery/api/search?id=${id}`,
   );
 
   let image: ImageType = await data.json();
