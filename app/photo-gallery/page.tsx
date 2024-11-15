@@ -29,12 +29,12 @@ export default async function PhotoGallery() {
 
   return (
     <div className="min-h-screen bg-white p-8 dark:bg-slate-800">
-      <div className="container mx-auto flex items-center justify-between">
-        <h1 className="flex items-center gap-4 pb-8 text-center text-4xl text-gray-800 dark:text-white">
+      <div className="container mx-auto flex max-w-screen-xl items-center justify-between">
+        <h1 className="flex items-center gap-4 pb-8 text-center text-2xl text-gray-800 md:text-4xl dark:text-white">
           Photo Gallery
           <span>|</span>
           <Link className="flex items-center gap-2" href={paths.home}>
-            <HomeIcon className="size-9" />
+            <HomeIcon className="size-6 md:size-9" />
             Home
           </Link>
         </h1>

@@ -34,7 +34,7 @@ export default function ThemeToggle() {
       style={{ marginBottom: "2rem" }}
       checked={isDarkMode}
       onChange={toggleDarkMode}
-      size={36}
+      size={30}
     />
   );
 }
