@@ -1,8 +1,10 @@
+export const dynamic = "force-dynamic";
+
 import ThemeToggle from "@/app/photo-gallery/_components/ThemeToggle";
 import { HomeIcon } from "@heroicons/react/24/solid";
 import { blurhashToBase64 } from "blurhash-base64";
 import { paths } from "lib/paths";
-import { Images } from "lib/types";
+import { getImages } from "lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -23,10 +25,7 @@ import Link from "next/link";
  */
 
 export default async function PhotoGallery() {
-  let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/all`,
-  );
-  let { images }: Images = await data.json();
+  let images = await getImages();
 
   return (
     <div className="min-h-screen bg-white p-8 dark:bg-slate-800">
@@ -68,7 +67,7 @@ export default async function PhotoGallery() {
                           (max-width: 1536px) 33vw,
                           25vw"
                   />
-                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-zinc-900 px-5 py-4 transition-opacity lg:opacity-0 lg:group-hover:opacity-100">
+                  <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-zinc-900 px-5 py-4 opacity-0 transition-opacity group-hover:opacity-100">
                     <h3 className="text-lg text-white transition-transform lg:translate-y-2 lg:group-hover:translate-y-0">
                       {image.description}
                     </h3>

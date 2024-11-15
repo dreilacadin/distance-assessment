@@ -4,9 +4,13 @@
 
 import { Image, Images } from "lib/types";
 
+const isProd = process.env.NODE_ENV === "production";
+
+console.log(process.env.NODE_ENV);
+
 export async function getImages(): Promise<Image[]> {
   let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/all`,
+    `${isProd ? "https://distance-assessment.vercel.app" : "http://localhost:3000"}/photo-gallery/api/all`,
   );
   let { images }: Images = await data.json();
   return images;
@@ -14,7 +18,7 @@ export async function getImages(): Promise<Image[]> {
 
 export async function getImage(id: string): Promise<Image> {
   let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/search?id=${id}`,
+    `${isProd ? "https://distance-assessment.vercel.app" : "http://localhost:3000"}/photo-gallery/api/search?id=${id}`,
   );
 
   let image: Image = await data.json();

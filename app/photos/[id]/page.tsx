@@ -1,7 +1,7 @@
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { blurhashToBase64 } from "blurhash-base64";
 import { paths } from "lib/paths";
-import { Image as ImageType } from "lib/types";
+import { getImage } from "lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,11 +11,7 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  let data = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/photo-gallery/api/search?id=${id}`,
-  );
-
-  let image: ImageType = await data.json();
+  let image = await getImage(id);
 
   if (!image) return <div>No Image found</div>;
 
